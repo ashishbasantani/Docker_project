@@ -1,0 +1,44 @@
+
+<h1><b>Docker and Android Project in the fight against COVID-19</b></h1>
+<br>
+<p>Problem Statement: In this time of COVID-19 there are a lot of problems faced by society, like if I talk about Italy when the number of patients increased so much they started ignoring patients who are above 65 of age because they were not having sufficient space (beds) to keep all the patient and many deaths happened due to not getting proper treatment. </p>
+<p>Similarly, if I talk about a test of COVID-19 that is called PCR test cannot be conducted in a mass way, for a country like South Korea it is possible to conduct a mass test but in the country like India which has a population of 1.3 billion conducting mass test is near to impossible. So what’s the solution?
+One other problem which the whole world is facing is Contact Tracing. Many people who are infected with COVID-19 doesn’t know that they are infected because showing symptoms take 2-14 days depending upon the immune system of a person, but symptoms are not showing it does not mean that infected person cannot infect the other person. An infected person can 100% infect any person by coming in his/her contact. Tracing people in the local area can be possible but what if the infected person travels in a train, bus or airplane than an infected person can accidentally infect 100’s of people and finding those people is impossible. So what’s the solution? </p>
+<br>
+<b>Here is the solution for both of the above problems: </b>
+
+<p><b>The solution to problem 1:</b> I propose an AI-enabled chatbot which will ask questions related to disease and using answers provided by the user it will predict whether a person has COVID-19 or not and it can also tell what are the chances that his/her result of a test can be positive. The questions asked will be very general.</p>
+
+<p><b>The solution to problem 2:</b> I propose a solution for Contact Tracing using a very common technology called Bluetooth. An Android app can be created which will use Bluetooth to perform contact tracing.<br> 
+How contact tracing using Bluetooth will work?<br>
+Suppose X is a person who is infected but X does not know about his infection as no symptoms are shown yet to him. But X has to visit Mumbai due to very urgent work and he is travelling to Mumbai by train. So what X does is he installs an app which is capable of recording all the mobile phone which were in contact to him. The benefit of recording these devices is whenever X is tested positive so we have all the devices which were in close contact to X device it means those people were also in close contact to X and might be they are also infected by X.<br>
+Now, because we have all the devices record we can easily trace those people who came in contact to X.<br>
+Using Bluetooth, the app stores the MAC address of all those devices which are near to it and when a person found to be positive using this record of MAC address tracing becomes fast and easy. As the MAC address is unique so there will be no conflict also.</p>
+
+<b>How Docker helps in solving both the above problems?</b>
+<p>
+Docker is a containerization technology which is capable to install any OS within seconds. So in my project Docker is used for two main reasons:<br>
+1.       Docker is very fast to install OS (containers), so if the load on one OS becomes heavy than all the traffic coming can be shifted to other by installing one more Docker container within seconds. The major benefit of doing this is the server will never go down because as soon as traffic increases one more container is launched and everything works smoothly <br>
+2.       Docker containers are independent OS so while deploying the application on web it becomes so easy. Without using Docker if we host an application on web than many conflict may arise due to dependency problem that is version of library the Hosting platform OS is using is different from version the project is using so this is the reason why I am using docker because I don't have to care what hosting platform is using</p>
+
+<b>What does Docker container contain?</b>
+<p>
+In this case a web server is configured inside Docker and using flask framework of python a web application is created which will serve API to android application and the WhatsApp bot. WhatsApp bot will clear confusion of many people that whether they are infected or not. </p>
+
+<b>Work done till now:</b>
+<p>
+1.       Docker container is configured and already hosted on Heroku cloud platform (PaaS). Flask application for responding to WhatsApp messages is also deployed inside container.<br>
+2.       The Android application which will be used to do Contact Tracing is already created and working very nice. Initially all the traced devices it is storing in local database of smart phone because of privacy concerns but when a person found to be positive the authority can manually upload data to Docker container database. This data will be used to further track those people who were in contact to infected person</p>
+
+<b>Work that needs to be done:</b>
+<p>
+1.       Initially, the WhatsApp bot does nothing because the chatbot is not accurate at all. I am finding a proper dataset according to my requirement and after I find it I will train the model. The code for training and answering the queries is already done only the need is dataset so that model can be trained<br>
+2.       Create API to serve to trace. </p>
+
+<p><b>Currently, I am enrolled in MLOps training under the great Vimal Daga sir Linux World Informatics Pvt. Ltd. After I complete this training I will enhance my project and add many other features as well.</b></p>
+
+<b>Project code link:</b> <a href=https://github.com/ashishbasantani/Docker_project"> https://github.com/ashishbasantani/Docker_project </a><br>
+<b>Demo video and app link:</b> <a href="https://drive.google.com/drive/folders/1n8d2J4UAkMeTxbgfDFv1IdC29qD_O6Bs?usp=sharing">https://drive.google.com/drive/folders/1n8d2J4UAkMeTxbgfDFv1IdC29qD_O6Bs?usp=sharing </a> <br>
+
+<h4><b>#VIMAL_DAGA_SIR #IIEC_CONNECT #IIEC_RISE #RIGHT_EDUCATION #DOCKER #MAKING_INDIA_FUTURE_READY #INDIA_FIGHT_AGAINST_COVID </b></h4>
+
